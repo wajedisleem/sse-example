@@ -64,9 +64,9 @@ sse-example/
 
 ### Setup
 
-1. **Clone or navigate to the project directory**
+1. **Clone the project repository**
    ```bash
-   cd sse-example
+   git clone https://github.com/wajedisleem/sse-example.git
    ```
 
 2. **Install backend dependencies**
