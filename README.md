@@ -14,18 +14,17 @@ This example showcases:
 ### Architecture
 
 ```
-┌─────────────────┐    SSE Connection    ┌─────────────────┐
-│                 │ ──────────────────► │                 │
-│  React Frontend │                     │ Express Backend │
-│   (Port 5173)   │ ◄────────────────── │   (Port 3000)   │
-└─────────────────┘   Progress Stream   └─────────────────┘
-                                               │
-                                               ▼
-                                        ┌─────────────┐
-                                        │   Worker    │
-                                        │  (Simulated │
-                                        │    Task)    │
-                                        └─────────────┘
+┌──────────────────┐    SSE Connection   ┌───────────────────┐
+│                  │ ──────────────────► │                   │
+│  React Frontend  │                     │  Express Backend  │
+│   (Port 5173)    │ ◄────────────────── │    (Port 3000)    │
+│                  │ ◄────────────────── │                   │
+└──────────────────┘   Progress Stream   └───────────────────┘
+                                                   │
+                                                   ▼
+                                         ┌───────────────────┐
+                                         │    Task Worker    │
+                                         └───────────────────┘
 ```
 
 ## Features
